@@ -25,7 +25,7 @@ static FileBuf read_file(const char *path) {
     perr(path);
     return out;
   }
-
+  return out;
 }
 
 
