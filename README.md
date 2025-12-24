@@ -22,6 +22,7 @@ I think the rules I should do are:
 - Read docs to learn
 - If I "vibe" code some shit maybe comment like #CHEATED HERE
 - Good rule of thumb could be more difficult first i.e
+- Minimal dependancies other than native library except frameworks obviously.
 
 ## Difficulty rating based on my knowledge (scale 1 easy 10 hard) (Fimilarity Top to bottom)
 
