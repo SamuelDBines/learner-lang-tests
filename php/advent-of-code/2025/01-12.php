@@ -1,7 +1,6 @@
 <?php 
   include "shared.php";
 
-  pSuccess("hello\n");
   $starting_pos = 50;
   $N = 50;
   $p_one_pass = 0;
@@ -33,7 +32,6 @@
         $p_two_pass++;
       }
     }
-    echo "line: " . $amount . "\n";
   }
   pSuccess("POne is $p_one_pass");
   pSuccess("PTwo is $p_two_pass");

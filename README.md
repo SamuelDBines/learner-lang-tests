@@ -33,10 +33,7 @@ I think the rules I should do are:
   - https://devhints.io/ansible
 - 1: Python - Easy except for loops
   - https://devhints.io/python
-- 3: Lua - Easy lang
-  - https://www.lua.org/manual/5.5/
-  - https://www.lua.org/pil/1.html
-  - https://devhints.io/lua
+- 3: Lua - [Lua](lua/README.md)
 - 5: go - Probably lower I just cba
   - https://devhints.io/go
   - https://go.dev/doc/
@@ -50,3 +47,4 @@ I think the rules I should do are:
 - 5: Kotlin - Easy java
 - 8: rust - Seems okay but everyone says it hard so will see
 - 4: Swift - I just don't like the syntax
+- 3: Ruby - Done once picked it up pretty quick

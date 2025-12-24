@@ -10,15 +10,7 @@ VALUE=$STARTING_POS
 
 # printf "${BLUE}$VALUE" 
 
-function perr() {
-  printf "${RED}[Error]: $1${RESET}\n" >&2
-  exit 1
-}
 
-function plog() {
-  printf "${BLUE}[RESULT]: $1${RESET}\n" >&2
-  # exit 0
-}
 
 # function pOne() {
 #   if [[ $1 == "L" ]]; then 
@@ -57,7 +49,6 @@ while IFS= read -r line; do
   if [[ $p_one_value -eq 0 ]]; then
     p_one_password=$(( p_one_password + 1 ))
   fi
-  test=0
 
   for ((i=0; i < $amount; i++)); do
     p_two_value=$(( (p_two_value + step + N) % N ))
