@@ -9,11 +9,6 @@ advc_2025 = $(advent_code)/2025
 c_advc_2025 = $(c_dir)/$(advc_2025)
 js_advc_2025 = $(js_dir)/$(advc_2025)
 
-
-
-
-
-
 advcode-2025:
 	$(MAKE) -C $(c_advc_2025) run;
 	$(MAKE) -C $(js_advc_2025) run;

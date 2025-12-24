@@ -1,6 +1,5 @@
-const fs = require('fs');
-
-const data = fs.readFileSync('./01-12-2025.txt', 'utf8');
+const { p } = require('../../utils/logger');
+const { data } = require('./01-12-shared');
 
 const lines = data
 	.trim()
@@ -21,12 +20,14 @@ lines.forEach((line, i) => {
 	const amount = parseInt(line.slice(1).trim(), 10);
 
 	if (Number.isNaN(amount)) {
-		throw new Error(`Bad line at ${i}: "${line}"`);
+		p.errclose(`Bad line at ${i}: "${line}"`);
+		return;
 	}
 
 	const step = dir === 'L' ? -1 : dir === 'R' ? 1 : null;
 	if (step === null) {
-		throw new Error(`Unknown direction "${dir}" on line ${i}: "${line}"`);
+		p.errclose(`Unknown direction "${dir}" on line ${i}: "${line}"`);
+		return;
 	}
 
 	for (let k = 0; k < amount; k++) {
@@ -38,8 +39,8 @@ lines.forEach((line, i) => {
 	}
 
 	if (DEBUG) {
-		console.log(`Line ${i}: ${line} -> value=${value} password=${password}`);
+		p.log(`Line ${i}: ${line} -> value=${value} password=${password}`);
 	}
 });
 
-console.log('Password:', password);
+p.res('Password:', password);

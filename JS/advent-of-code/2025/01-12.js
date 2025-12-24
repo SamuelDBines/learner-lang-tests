@@ -1,11 +1,5 @@
-const fs = require('fs');
-const path = require('path');
 const { p } = require('../../utils/logger');
-
-const data = fs.readFileSync(
-	path.join(__dirname, '../../../', 'advent-of-code/2025/01-12-2025.txt'),
-	'utf8'
-);
+const { data } = require('./01-12-shared');
 
 const lines = data
 	.trim()
@@ -26,9 +20,8 @@ lines.forEach((line, i) => {
 	const amount = parseInt(line.slice(1).trim(), 10);
 
 	if (Number.isNaN(amount)) {
-		p.err(`Bad line at ${i}: "${line}"`);
-		process.exit(1);
-		return 1;
+		p.errclose(`Bad line at ${i}: "${line}"`);
+		return;
 	}
 
 	if (dir === 'L') {
@@ -36,9 +29,8 @@ lines.forEach((line, i) => {
 	} else if (dir === 'R') {
 		value = (value + amount) % N;
 	} else {
-		p.err(`Unknown direction "${dir}" on line ${i}: "${line}"`);
-		process.exit(1);
-		return 1;
+		p.errclose(`Unknown direction "${dir}" on line ${i}: "${line}"`);
+		return;
 	}
 
 	if (value === 0) {
@@ -50,4 +42,4 @@ lines.forEach((line, i) => {
 	}
 });
 
-p.warn('Password:', password);
+p.res('Password:', password);
