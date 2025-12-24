@@ -18,7 +18,6 @@ let value = startingPosition;
 lines.forEach((line, i) => {
 	const dir = line[0];
 	const amount = parseInt(line.slice(1).trim(), 10);
-
 	if (Number.isNaN(amount)) {
 		p.errclose(`Bad line at ${i}: "${line}"`);
 		return;

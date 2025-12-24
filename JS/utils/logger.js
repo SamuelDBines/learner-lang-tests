@@ -1,7 +1,7 @@
 const BLUE = '\x1b[34m';
+const RESET = '\x1b[0m';
 const YELLOW = '\x1b[33m';
 const RED = '\x1b[31m';
-const RESET = '\x1b[0m';
 
 const isObjectOrArray = (msg) =>
 	msg

@@ -17,6 +17,10 @@ static void perr(const char *path) {
   fprintf(stderr, "fseek(%s): %s\n", path, strerror(errno));
 }
 
+void printPassword(long password) {
+  printf("%s[Result] Password: %ld%s\n",BLUE,password,RESET);
+}
+
 static FileBuf read_file(const char *path) {
   FileBuf out = {0};
   FILE *f = fopen(path, "rb");
@@ -29,9 +33,7 @@ static FileBuf read_file(const char *path) {
 }
 
 
-void printPassword(long password) {
-  printf("Password: %ld\n", password);
-}
+
 
 
 // FILE* readFile() {

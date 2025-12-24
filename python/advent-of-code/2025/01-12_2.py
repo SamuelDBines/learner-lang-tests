@@ -15,15 +15,13 @@ for x in filedata:
   if not amount.isnumeric():
     raise 'Amount is not a number'
   amount = int(amount)
-  if dir == 'L':
-    value = (value - (amount % N) + N) % N
-  elif dir == 'R':
-    value = (value + amount) % N
-  else:
-    raise 'Error occured raising the value'
-  
-  if value == 0:
-    password = password + 1
+  step = {"L": -1, "R": 1}.get(dir) 
+  if step is None:
+    raise ValueError(f"Unknown direction {dir!r}")
+  for k in range(amount):
+    value = (value + step + N) % N
+    if value == 0:
+      password = password + 1
   
 
 print(bcolors.OKBLUE + "[Result] Password:" +  str(password) +  bcolors.ENDC)

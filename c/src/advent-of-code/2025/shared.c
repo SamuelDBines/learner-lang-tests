@@ -1,5 +1,10 @@
+#include <stdio.h>
+#include <errno.h>
 #include <string.h>
 #include <ctype.h>
+
+static const char *BLUE  = "\x1b[34m";
+static const char *RESET = "\x1b[0m";
 
 static void rstrip(char *s) {
   size_t n = strlen(s);
