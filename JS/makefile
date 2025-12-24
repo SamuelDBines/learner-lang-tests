@@ -1,0 +1,2 @@
+check-version:
+	  @node -v;

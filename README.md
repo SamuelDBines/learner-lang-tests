@@ -25,7 +25,7 @@ I think the rules I should do are:
 
 ## Difficulty rating based on my knowledge (scale 1 easy 10 hard) (Fimilarity Top to bottom)
 
-- 1: JS/TS - Just assume TS because native is silly
+- 1: JS/TS - [JS-Doc](JS/README.md)
 - 2: Terraform - Its simple and not really a language but whatevers
 - 1: Docker - Cause its not a language but whatever
   - https://devhints.io/docker-compose
@@ -39,12 +39,9 @@ I think the rules I should do are:
 - 5: go - Probably lower I just cba
   - https://devhints.io/go
   - https://go.dev/doc/
-    -4: bash - Yeh I just forget commands to often
-  - https://devhints.io/bash
-  - https://devhints.io/grep
-  - https://devhints.io/cron
-- 3: PHP - I heard good things recently not a fan of the syntax tbh
-- 6: C - Nice
+- 4: bash - [bash-Doc](bash/README.md)
+- 3: PHP - [php-Doc](php/README.md)
+- 6: C -[C-Doc](C/README.md)
 - 8: C++ - Shit C
 - 4: C# - Easy Java and pretty decent actually
 - 8: Cobol - Wasn't as bad as I thought
