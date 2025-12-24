@@ -41,7 +41,7 @@ I think the rules I should do are:
   - https://go.dev/doc/
 - 4: bash - [bash-Doc](bash/README.md)
 - 3: PHP - [php-Doc](php/README.md)
-- 6: C -[C-Doc](C/README.md)
+- 6: C -[C-Doc](c/README.md)
 - 8: C++ - Shit C
 - 4: C# - Easy Java and pretty decent actually
 - 8: Cobol - Wasn't as bad as I thought
