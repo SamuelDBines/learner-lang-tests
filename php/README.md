@@ -20,4 +20,13 @@ php -S localhost:8000 -t foo/
 php -S localhost:8000 router.php -c ./php.ini
 ```
 
+### CLI
+
+```bash
+php -f <file/location>
+```
+
 ## References
+
+- https://www.php.net/manual/en/features.commandline.php
+- https://www.w3schools.com/php/php_variables.asp
