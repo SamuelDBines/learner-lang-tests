@@ -2,7 +2,7 @@
   include "shared.php";
 
   $starting_pos = 50;
-  $N = 50;
+  $N = 100;
   $p_one_pass = 0;
   $p_one_val = $starting_pos;
   $p_two_pass = 0;
@@ -11,7 +11,7 @@
   while(!feof($FILE)) {
     $line = fgets($FILE);
     $dir = $line[0];
-    $amount = substr($line, 1);
+    $amount =(int)trim(substr($line, 1));
     $step = 0;
     if ( $dir == "L") {
       $p_one_val = ($p_one_val - ($amount % $N) + $N) % $N;
@@ -22,15 +22,13 @@
     } else {
       pErr("Incorrect direction");
     }
-    if($p_one_val == 0 ) {
-      $p_one_pass++;
-    }
+
+    if($p_one_val == 0 ) $p_one_pass++;
+
     for($i=0; $i < $amount; $i++) {
-    
       $p_two_val = ($p_two_val + $step + $N) % $N;
-      if ($p_two_val == 0) {
-        $p_two_pass++;
-      }
+      if ($p_two_val == 0) $p_two_pass++;
+      
     }
   }
   pSuccess("POne is $p_one_pass");

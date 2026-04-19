@@ -7,6 +7,10 @@ lua test.lua
 
 ## Setup
 
+```bash
+brew install lua luarocks
+```
+
 - https://formulae.brew.sh/formula/lua
 
 ## References
